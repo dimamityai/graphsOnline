@@ -1,0 +1,370 @@
+/*---------------------------Модальный фон--------------------------------------------*/
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включите прокрутку, если это необходимо */
+    background-color: rgb(0,0,0); /* Цвет запасной вариант */
+    background-color: rgba(0,0,0,0.4); /* Черный с непрозрачностью */
+}
+
+/* при отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+    pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 30px auto; /* для отображения модального окна по центру */
+    }
+}
+/* свойства для блока, содержащего контент модального окна */
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fefefe;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+    margin: 15% auto; /* 15% сверху и по центру */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Может быть больше или меньше, в зависимости от размера экрана */
+    height: 17%;
+    overflow: hidden;
+}
+@media (min-width: 768px) {
+    .modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    }
+}
+
+/* Кнопка закрытия */
+.close {
+    position: absolute; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    right: 10px;
+    top: 0;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    /*font-weight: bold;*/
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*.BoxMain{*/
+/*    position: absolute; !* Оставаться на месте *!*/
+/*}*/
+
+.inputBox {
+    position: absolute; /* Оставаться на месте */
+    margin-top: 5%;
+    right: 45%;
+    width: 100px;
+    height: 30px;
+    border-radius:10px;
+}
+
+.scrollBar {
+    position: absolute; /* Оставаться на месте */
+    margin-top: 6%;
+    left: 15%;
+}
+
+.InlineStylePaddingRight {
+    position: absolute; /* Оставаться на месте */
+    margin-top: 21%;
+    right: 10%;
+    top: 0;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    /*font-weight: bold;*/
+}
+.InlineStylePaddingRight1 {
+    position: absolute; /* Оставаться на месте */
+    /*margin-top: 21%;*/
+    right: 10%;
+    top: 10px;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    /*font-weight: bold;*/
+}
+
+/*------------------------------------------------------------------------------------------*/
+
+#mynetwork {
+    width: 100%;
+    height: 1200px;
+    border: 1px solid lightgray;
+}
+
+/*на одной линии кнопки и поле ввода*/
+/*-----------------------------------*/
+div {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#block-search {
+    /*float: right;*/
+    margin: 7px 10px;
+}
+
+#block-search form{
+    vertical-align:middle;
+}
+
+#block-search input[type="text"] {
+    background: #f4f4ec;
+    border: #dfdfdf 1px solid;
+    margin:0;
+    padding:0;
+    display:inline-block;
+}
+/*-----------------------------------*/
+
+
+/*-----------Текст-подсказка-3--------------*/
+.text_Input_1 {
+    /*размеры ячеек*/
+    width: 78px;
+    height: 30px;
+    /*-------------*/
+    border-radius:10px;
+}
+
+.inputStyle {
+    /*width: 19vw;*/
+    border-radius:10px;
+}
+/*-----------Кнпоки--------------*/
+/*.gradient-button {*/
+/*    width: 12vw;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    margin-bottom: 20px; !*отступ снизу*!*/
+/*}*/
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-style: inherit;
+    color: rgba(73, 84, 91, 0.91);
+    font-weight: 100;
+top: 15px;
+
+    text-transform: uppercase;
+
+}
+
+/*49545BE8*/
+.btnStyle {
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: sans-serif;
+    background: rgba(109, 111, 192, 0.64);
+}
+/*312152E8*/
+.text-box {
+    margin-left: 100vw;
+    margin-top: 100vh;
+}
+.btn:link,
+.btn:visited {
+    padding: 5px 25px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /*отступ снизу*/
+    overflow: auto;
+    margin-right: 10px; /*отступ снизу*/
+
+}
+.btn{
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: rgba(73, 84, 91, 0.91);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background: rgb(164, 151, 222);
+    font-size: 10px;
+    border-width: thin;
+    border-color: rgba(49, 33, 82, 0.91);
+
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /*background-color: rgba(175, 178, 236, 0.64);*/
+    background-color: #cdeffc;
+}
+.btn:focus {
+    font-weight: 700;
+    border: thick double rgba(73, 84, 91, 0.91);
+    background-color: rgba(209, 250, 225, 0.91);
+}
+
+.b-container{
+
+    padding: 1px 6px;
+    display: inline-block;
+    border-radius: 7px;
+    background: rgba(227, 227, 243, 0.64);
+    font-size: 9px;
+    border: thin double rgba(69, 42, 189, 0.64);
+
+    color: rgba(73, 84, 91, 0.91);
+    position: fixed; /*блоку content создаем позицию absolute*/
+    right: 10px; /* Расстояние от правого края окна браузера */
+    top: 10px;
+}
+
+.b-popup-text-content{
+    text-transform: uppercase;
+
+    width: 10px;
+    height: 20px;
+    font-family: 'Roboto', sans-serif;
+    /*font-weight: 700;*/
+
+    text-decoration:none;
+    font-style: inherit;
+    color: rgba(73, 84, 91, 0.91);
+}
+
+.b-popup-text-content1{
+    width: 10px;
+    height: 20px;
+    text-transform: uppercase;
+
+    font-family: 'Roboto', sans-serif;
+    /*font-weight: 700;*/
+
+    text-decoration:none;
+    font-style: inherit;
+    color: rgba(73, 84, 91, 0.91);
+}
+
+.b-popup{
+    width: 100%;
+    height: 2000px;
+    background-color: rgba(0, 0, 0, 0.91);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+}
+.b-popup .b-popup-content{
+    margin:40px auto 0px auto;
+    width:100px;
+    height:40px;
+    padding:10px;
+    background-color: #c5c5c5;
+    border-radius:5px;
+    box-shadow: 0px 0px 10px #000;
+}
+.b-container:hover{
+
+    background-color: #CDEFFCFF;
+    box-shadow: 0 10px 20px rgba(73, 84, 91, 0.91);
+
+
+}
+.b-container:active {
+    box-shadow: 0 10px 20px rgba(73, 84, 91, 0.91);
+    background-color: rgba(175, 239, 203, 0.91);
+
+}
+.b-popup-text-content:hover{
+    color: rgba(73, 84, 91, 0.91);
+}
+.b-popup-text-content1:hover{
+     color: rgba(73, 84, 91, 0.91);
+ }
+.btn1:link,
+.btn1:visited {
+    padding: 5px 25px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px; /*отступ снизу*/
+    overflow: auto;
+}
+.btn1{
+    padding: 5px 25px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; /*отступ снизу*/
+    overflow: auto;
+
+    text-transform: uppercase;
+    color: rgba(73, 84, 91, 0.91);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background: rgba(227, 227, 243, 0.64);
+    font-size: 10px;
+    border-width: thin;
+    border-color: rgba(49, 33, 82, 0.91);
+}
+
+.active, .btn1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #cdeffc;
+}
+.active, .btn1:focus {
+    font-weight: 700;
+    border: thick double rgba(73, 84, 91, 0.91);
+    background-color: rgba(209, 250, 225, 0.91);
+}
+
+
+table, td, th {
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+
+
+
